@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react';
-import InputTypes from '../src';
+import { object, string, text, color, array} from '../src';
 
-const Form = InputTypes.object({label: 'Product'})({
-  name: InputTypes.string({label: 'Name'}),
-  description: InputTypes.text({label: 'Description'}),
-  color: InputTypes.color({label: 'Color'}),
-  variants: InputTypes.array({label: 'Variants'})(
-    InputTypes.object({label: 'Varient'})({
-      name: InputTypes.string({label: 'Name'}),
-      options: InputTypes.array({label: 'Options'})(
-        InputTypes.string()
+const Form = object({label: 'Product'})({
+  name: string({label: 'Name'}),
+  description: text({label: 'Description'}),
+  color: color({label: 'Color'}),
+  variants: array({label: 'Variants'})(
+    object({label: 'Varient'})({
+      name: string({label: 'Name'}),
+      options: array({label: 'Options'})(
+        string()
       )
     })
   )

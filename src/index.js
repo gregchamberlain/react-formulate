@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import { merge } from 'lodash';
-import { ChromePicker } from 'react-color';
-import color from './inputs/color';
-import string from './inputs/string';
-import text from './inputs/text';
-import array from './inputs/array';
-import object from './inputs/object';
-
-const number = ({value, onChange}) => (
-  <input type="number" onChange={e => onChange(parseInt(e.target.value))} value={value} />
-);
-
-number.defaultValue = 0;
+export color from './inputs/color';
+export string from './inputs/string';
+export text from './inputs/text';
+export array from './inputs/array';
+export object from './inputs/object';
+export number from './inputs/number';
 
 const select = (...options) => ({value, onChange}) => (
   <select value={value} onChange={e => onChange(e.target.value)}>
@@ -33,13 +27,14 @@ export const shadowToString = obj => (
   `${obj.xOffset}px ${obj.yOffset}px ${obj.blurRadius}px ${colorToString(obj.color)}`
 );
 
-export default {
-  string,
-  text,
-  number,
-  select,
-  bool,
-  array,
-  object,
-  color
-};
+
+// export default {
+//   string,
+//   text,
+//   number,
+//   select,
+//   bool,
+//   array,
+//   object,
+//   color
+// };
