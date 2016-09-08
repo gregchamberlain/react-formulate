@@ -7,7 +7,7 @@ class ColorInput extends Component {
     super(props);
     this.state = {
       displayColorPicker: false,
-      color: props.value,
+      color: props.value || {r: 0, g: 0, b: 0, a: 1},
     }
   }
 
@@ -28,6 +28,9 @@ class ColorInput extends Component {
 
     const styles = reactCSS({
       'default': {
+        container: {
+          position: 'relative'
+        },
         color: {
           width: '36px',
           height: '14px',
@@ -58,7 +61,8 @@ class ColorInput extends Component {
     });
 
     return (
-      <div>
+      <label style={styles.container}>
+        {this.props.opts.label}
         <div style={ styles.swatch } onClick={ this.handleClick }>
           <div style={ styles.color } />
         </div>
@@ -66,10 +70,18 @@ class ColorInput extends Component {
           <div style={ styles.cover } onClick={ this.handleClose }/>
           <SketchPicker color={ this.state.color } onChange={ this.handleChange } />
         </div> : null }
-
-      </div>
+        {this.props.children}
+      </label>
     )
   }
 }
 
-export default ColorInput
+const color = (opts = {}) => {
+  const InputWrapper = ({value, onChange}) => (
+    <ColorInput value={value} onChange={onChange} opts={opts}/>
+  );
+  InputWrapper.defaultValue = {r: 0, g: 0, b: 0, a: 1}
+  return InputWrapper
+}
+
+export default color

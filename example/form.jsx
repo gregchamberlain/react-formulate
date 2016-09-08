@@ -4,7 +4,15 @@ import InputTypes from '../src';
 const Form = InputTypes.object({label: 'Product'})({
   name: InputTypes.string({label: 'Name'}),
   description: InputTypes.text({label: 'Description'}),
-  tags: InputTypes.array({label: 'Tags'})(InputTypes.string())
+  color: InputTypes.color({label: 'Color'}),
+  variants: InputTypes.array({label: 'Variants'})(
+    InputTypes.object({label: 'Varient'})({
+      name: InputTypes.string({label: 'Name'}),
+      options: InputTypes.array({label: 'Options'})(
+        InputTypes.string()
+      )
+    })
+  )
 })
 
 
@@ -15,7 +23,8 @@ export default class ComponentName extends Component {
     this.state = {
       name: '',
       description: '',
-      tags: []
+      color: {r: 0, g: 0, b: 0, a: 1},
+      variants: []
     }
   }
 
