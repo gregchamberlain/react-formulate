@@ -1,10 +1,12 @@
 {
-  "name": "react-component-skeleton",
+  "name": "react-declarative-forms",
   "version": "0.1.0",
-  "description": "A simple responsive sidebar component for React",
+  "description": "The easiest way to make React forms",
   "keywords": [
     "react",
-    "react-component"
+    "react-component",
+    "react-form",
+    "declarative"
   ],
   "main": "dist/bundle.js",
   "scripts": {
@@ -14,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gregchamberlain/react-component-skeleton.git"
+    "url": "git+https://github.com/gregchamberlain/react-declarative-forms.git"
   },
   "author": "Greg Chamberlain <gregchamberlain94@gmail.com> (https://gregchamberlain.github.io)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gregchamberlain/react-component-skeleton/issues"
+    "url": "https://github.com/gregchamberlain/react-declarative-forms/issues"
   },
-  "homepage": "https://github.com/gregchamberlain/react-component-skeleton#readme",
+  "homepage": "https://github.com/gregchamberlain/react-declarative-forms#readme",
   "devDependencies": {
     "babel-core": "^6.5.2",
     "babel-eslint": "^6.1.2",
@@ -32,10 +34,6 @@
     "babel-preset-stage-0": "^6.5.0",
     "eslint": "^3.3.0",
     "hjs-webpack": "^7.2.1"
-  },
-  "peerDependencies": {
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
   },
   "dependencies": {
     "react": "^15.3.0",
