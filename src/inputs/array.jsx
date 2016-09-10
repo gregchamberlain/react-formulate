@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { merge } from 'lodash';
 
-const array = (opts = {}) => inputType => {
+const array = inputType => (opts = {}) => {
   const InputWrapper = ({value, onChange, children}) => (
     <ArrayInput value={value} onChange={onChange} InputType={inputType} opts={opts}>
       {children}
@@ -9,7 +9,7 @@ const array = (opts = {}) => inputType => {
   );
   InputWrapper.defaultValue = [];
   return InputWrapper;
-}
+};
 
 const ArrayInput = ({ value = [], onChange, InputType, opts, children }) => (
   <label>
@@ -36,12 +36,12 @@ const changeItem = (arr, idx, val) => {
   const newArr = merge([], arr);
   newArr[idx] = val;
   return newArr;
-}
+};
 
 const removeItem = (arr, idx) => {
   const newArr = merge([], arr);
   newArr.splice(idx, 1);
   return newArr;
-}
+};
 
 export default array;

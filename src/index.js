@@ -6,35 +6,14 @@ export text from './inputs/text';
 export array from './inputs/array';
 export object from './inputs/object';
 export number from './inputs/number';
-
-const select = (...options) => ({value, onChange}) => (
-  <select value={value} onChange={e => onChange(e.target.value)}>
-    {options.map(option => <option value={option} key={option}>{option}</option>)}
-  </select>
-);
-
-const bool = ({value, onChange}) => (
-  <input type="checkbox" checked={value} onChange={e => onChange(e.target.checked)} />
-);
-
-bool.defaultValue = false;
+export select from './inputs/select';
+export boolean from './inputs/bool';
+export fromObject from './utils/from_object';
 
 export const colorToString = color => {
-  return `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`
-}
+  return `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+};
 
 export const shadowToString = obj => (
   `${obj.xOffset}px ${obj.yOffset}px ${obj.blurRadius}px ${colorToString(obj.color)}`
 );
-
-
-// export default {
-//   string,
-//   text,
-//   number,
-//   select,
-//   bool,
-//   array,
-//   object,
-//   color
-// };
