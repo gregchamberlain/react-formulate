@@ -19,7 +19,7 @@
     "url": "git+https://github.com/gregchamberlain/react-formulate.git"
   },
   "author": "Greg Chamberlain <gregchamberlain94@gmail.com> (https://gregchamberlain.github.io)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gregchamberlain/react-formulate/issues"
   },
