@@ -1,5 +1,5 @@
 {
-  "name": "react-declarative-forms",
+  "name": "react-formulate",
   "version": "0.1.0",
   "description": "The easiest way to make React forms",
   "keywords": [
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gregchamberlain/react-declarative-forms.git"
+    "url": "git+https://github.com/gregchamberlain/react-formulate.git"
   },
   "author": "Greg Chamberlain <gregchamberlain94@gmail.com> (https://gregchamberlain.github.io)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gregchamberlain/react-declarative-forms/issues"
+    "url": "https://github.com/gregchamberlain/react-formulate/issues"
   },
-  "homepage": "https://github.com/gregchamberlain/react-declarative-forms#readme",
+  "homepage": "https://github.com/gregchamberlain/react-formulate#readme",
   "devDependencies": {
     "babel-core": "^6.5.2",
     "babel-eslint": "^6.1.2",
