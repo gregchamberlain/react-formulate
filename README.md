@@ -1,4 +1,4 @@
-# react-formulate
+# react-formulate [![npm version](https://badge.fury.io/js/react-formulate.svg)](https://badge.fury.io/js/react-formulate)
 Easily create forms for even the most complex data.
 
 ## Gettings Started
