@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/gregchamberlain/react-formulate-gh-pages#readme",
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
     "babel-core": "^6.5.2",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.3",
@@ -32,8 +33,13 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.0",
     "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.25.0",
     "eslint": "^3.3.0",
-    "hjs-webpack": "^7.2.1"
+    "hjs-webpack": "^7.2.1",
+    "node-sass": "^3.9.3",
+    "postcss-loader": "^0.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1"
   },
   "dependencies": {
     "react": "^15.3.0",

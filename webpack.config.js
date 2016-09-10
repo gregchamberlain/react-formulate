@@ -2,15 +2,13 @@ var getConfig = require('hjs-webpack');
 
 var config = getConfig({
   isDev: process.env.NODE_ENV !== "production",
-  in: process.env.NODE_ENV !== "production"?'example/main.js':'src/index.js',
+  in: 'src/react_formulate.jsx',
   out: 'dist',
   output: {
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    cssFilename: 'styles.css'
   },
   clearBeforeBuild: true
 });
 
-if (process.env.NODE_ENV === "production"){
-  config.output.libraryTarget = "commonjs2";
-}
 module.exports = config;
