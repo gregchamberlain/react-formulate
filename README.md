@@ -59,3 +59,10 @@ const data = {
   }
 }
 ```
+
+### TODO List
+- [ ] Custom Labels
+- [ ] InputType Overrides
+- [ ] Input Validators
+
+Created with ♥ by [Greg Chamberlain](https://github.com/gregchamberlain)
