@@ -1,5 +1,5 @@
 {
-  "name": "react-formulate",
+  "name": "react-formulate-gh-pages",
   "version": "0.1.0",
   "description": "The easiest way to make React forms",
   "keywords": [
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gregchamberlain/react-formulate.git"
+    "url": "git+https://github.com/gregchamberlain/react-formulate-gh-pages.git"
   },
   "author": "Greg Chamberlain <gregchamberlain94@gmail.com> (https://gregchamberlain.github.io)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gregchamberlain/react-formulate/issues"
+    "url": "https://github.com/gregchamberlain/react-formulate-gh-pages/issues"
   },
-  "homepage": "https://github.com/gregchamberlain/react-formulate#readme",
+  "homepage": "https://github.com/gregchamberlain/react-formulate-gh-pages#readme",
   "devDependencies": {
     "babel-core": "^6.5.2",
     "babel-eslint": "^6.1.2",
@@ -37,8 +37,8 @@
   },
   "dependencies": {
     "react": "^15.3.0",
-    "react-color": "^2.2.7",
     "react-dom": "^15.3.0",
+    "react-formulate": "^0.1.0",
     "reactcss": "^1.0.7"
   }
 }
