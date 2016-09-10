@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { object, string, text, color, array, boolean, fromObject } from '../src';
+import Form, { object, string, text, color, array, boolean, fromObject } from '../src';
+
 
 const obj = {
   firstName: 'Greg',
@@ -16,7 +17,7 @@ const obj = {
   }
 };
 
-const Form = fromObject(obj)();
+// const Form = fromObject(obj)();
 // const Form = object({label: 'Product'})({
 //   name: string({label: 'Name'}),
 //   description: text({label: 'Description'}),
@@ -55,7 +56,8 @@ export default class ComponentName extends Component {
     return (
       <div>
         <h1>Form</h1>
-        <Form onChange={this.handleChange} value={this.state} />
+        {/* <Form onChange={this.handleChange} value={this.state} /> */}
+        <Form from={obj}/>
         <hr />
         <div><pre>{JSON.stringify(this.state, null, 2)}</pre></div>
       </div>

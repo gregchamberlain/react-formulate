@@ -9,6 +9,9 @@ export number from './inputs/number';
 export select from './inputs/select';
 export boolean from './inputs/bool';
 export fromObject from './utils/from_object';
+import Form from './utils/form';
+
+export default Form;
 
 export const colorToString = color => {
   return `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;

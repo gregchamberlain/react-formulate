@@ -1,10 +1,12 @@
 import React from 'react';
+import { merge } from 'lodash';
 
 const defaultOpts = {
   onChange: e => e.target.checked
 };
 
-const bool = (opts = defaultOpts) => {
+const bool = (opts = {}) => {
+  opts = merge(defaultOpts, opts);
   const InputWrapper = ({value, onChange, children}) => (
 
     <label>
