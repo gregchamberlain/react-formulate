@@ -12,7 +12,7 @@
   "scripts": {
     "start": "hjs-dev-server",
     "build": "NODE_ENV=production webpack --progress",
-    "prepublish": "npm run build"
+    "push": "npm run build; git push origin gh-pages;"
   },
   "repository": {
     "type": "git",
