@@ -50,7 +50,6 @@
     "no-implicit-coercion": 1,
     "no-inner-declarations": 2,
     "no-invalid-regexp": 2,
-    "no-invalid-this": 1,
     "no-irregular-whitespace": 2,
     "no-label-var": 2,
     "no-lone-blocks": 1,

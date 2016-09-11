@@ -1,0 +1,19 @@
+.example-container {
+  display: flex;
+  padding: 10px;
+  background: #aaa;
+  border-radius: 5px;
+
+  .example-code {
+    flex: 1;
+  }
+  .example-preview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    label {
+      display: block;
+    }
+  }
+}

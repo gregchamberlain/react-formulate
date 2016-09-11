@@ -19,17 +19,7 @@
     }
   }
 
-  .playground {
-    display: flex;
-    .playgroundCode {
-      flex: 1;
-    }
-    .playgroundPreview {
-      flex: 1;
-      label {
-        display: block;
-        border-left: 2px solid white;
-      }
-    }
+  .content {
+    padding: 10px 15px;
   }
 }

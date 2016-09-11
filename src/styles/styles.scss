@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import 'sidebar';
 @import 'getting-started';
+@import 'example';
+@import '../../node_modules/codemirror/lib/codemirror.css';
+@import '../../node_modules/codemirror/theme/monokai.css';
 
 html, body, #root {
   font-family: 'Roboto', sans-serif;
