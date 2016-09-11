@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Form from 'react-formulate';
-import Markdown from 'react-remarkable';
 
 const GettingStarted = ({  }) => (
   <div className="fill getting-started">
@@ -11,12 +10,6 @@ const GettingStarted = ({  }) => (
         <code>npm install --save react-formulate</code>
     </div>
     <div id="basic-example">
-      <Markdown>
-        # This is Cool!
-        ```
-        import Form from 'react-formulate';
-        ```
-      </Markdown>
     </div>
   </div>
 );
