@@ -18,7 +18,7 @@ const getInputType = val => {
         return fromObject(val);
       }
     default:
-      return InputTypes[typeof val];
+      return InputTypes[typeof val] || InputTypes.string;
   }
 };
 
