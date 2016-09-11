@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import fromObject from './from_object.js';
-import { merge } from 'lodash';
+import { merge, isEqual } from 'lodash';
 
 class Form extends Component {
   constructor(props) {
@@ -9,9 +9,15 @@ class Form extends Component {
     this.inputs = fromObject(this.state)();
   }
 
+  componentWillReceiveProps(props) {
+    if (!isEqual(props.from, this.props.from)) {
+      this.setState(merge({}, props.from));
+    }
+  }
+
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    this.props.onSubmit(this.state);
   }
 
   handleChange = val => {
@@ -28,5 +34,10 @@ class Form extends Component {
     );
   }
 }
+
+Form.defaultProps = {
+  from: {},
+  onSubmit: value => console.log(value)
+};
 
 export default Form;
