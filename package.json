@@ -11,8 +11,7 @@
   "main": "dist/bundle.js",
   "scripts": {
     "start": "hjs-dev-server",
-    "build": "NODE_ENV=production webpack --progress",
-    "push": "npm run build; git push origin gh-pages;"
+    "build": "NODE_ENV=production webpack --progress"
   },
   "repository": {
     "type": "git",
