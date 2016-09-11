@@ -11,4 +11,6 @@ var config = getConfig({
   clearBeforeBuild: true
 });
 
+config.module.loaders.push({ test: /\.example$/, loader: 'raw-loader' });
+
 module.exports = config;

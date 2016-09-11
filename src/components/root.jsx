@@ -1,9 +1,14 @@
 import React from 'react';
+import Sidebar from './ui/sidebar';
+import GettingStarted from './getting_started';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 const Root = (props) => (
-  <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
-    <h1>Documentation for <a href="https://github.com/gregchamberlain/react-formulate">react-formulate</a> coming soon!</h1>
-  </div>
+  <Router history={hashHistory}>
+    <Route path="/" component={Sidebar}>
+      <IndexRoute component={GettingStarted}/>
+    </Route>
+  </Router>
 );
 
 export default Root;

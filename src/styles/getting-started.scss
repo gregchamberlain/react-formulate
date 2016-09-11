@@ -1,0 +1,35 @@
+.getting-started {
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    background: linear-gradient(to bottom right, #03A9F4, #0277BD);
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    h1 {
+      margin: 0;
+    }
+
+    code {
+      padding: 20px;
+      background: #01579B;
+      border-radius: 5px;
+    }
+  }
+
+  .playground {
+    display: flex;
+    .playgroundCode {
+      flex: 1;
+    }
+    .playgroundPreview {
+      flex: 1;
+      label {
+        display: block;
+        border-left: 2px solid white;
+      }
+    }
+  }
+}

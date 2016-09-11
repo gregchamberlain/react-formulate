@@ -1,0 +1,39 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background: #444;
+  color: #eee;
+  transition: left 0.3s ease-in;
+
+  .sidebar-item {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    &.active {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+  }
+}
+
+.sidebar-content {
+  margin-left: 200px;
+  transition: margin-left 0.3s ease-in;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    left: -200px;
+  }
+  .sidebar-content {
+    margin-left: 0;
+  }
+}

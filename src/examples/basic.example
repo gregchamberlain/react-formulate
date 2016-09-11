@@ -1,0 +1,16 @@
+<Form
+  from={{
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 23,
+    contact: {
+      phone: {
+        mobile: '(555) 555-5555',
+        home: '(444) 444-4444'
+      },
+      emails: [
+        'johndoe@mail.com',
+        'john@doe.com'
+      ]
+    }
+  }}/>
