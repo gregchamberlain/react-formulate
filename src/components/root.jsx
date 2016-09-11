@@ -7,6 +7,7 @@ const Root = (props) => (
   <Router history={hashHistory}>
     <Route path="/" component={Sidebar}>
       <IndexRoute component={GettingStarted}/>
+      <Route path="sandbox" component={() => <div>Sandbox</div>} />
     </Route>
   </Router>
 );

@@ -5,7 +5,7 @@ const Sidebar = ({ children }) => (
   <div className="fill">
     <div className="sidebar">
       <Item href="/">Getting Started</Item>
-      <Item href="/InpuTypes">InputTypes</Item>
+      <Item href="/sandbox">Sandbox</Item>
     </div>
     <div className="sidebar-content">
       {children}

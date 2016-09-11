@@ -16,14 +16,13 @@ class Example extends Component {
     super(props);
     this.state = {
       value: props.data,
-      code: JSON.parse(props.data)
+      code: parseInput(props.data)
     };
   }
 
   updateCode = value => {
     try {
-      const code = JSON.parse(value);
-      console.log(code);
+      const code = parseInput(value);
       this.setState({value, code});
     } catch(e) {
       this.setState({value});
@@ -44,5 +43,9 @@ class Example extends Component {
     );
   }
 }
+
+const parseInput = input => {
+  return eval(`(${input.split('=')[1].trim()})`);
+};
 
 export default Example;

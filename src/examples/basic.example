@@ -1,16 +1,26 @@
-<Form
-  from={{
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 23,
-    contact: {
-      phone: {
-        mobile: '(555) 555-5555',
-        home: '(444) 444-4444'
-      },
-      emails: [
-        'johndoe@mail.com',
-        'john@doe.com'
-      ]
-    }
-  }}/>
+import React, { Component } from 'react';
+import Form from 'react-formulate';
+
+// Preexisting data   //|   From Scratch
+                      //|
+const data = {        //|   const data = {
+  firstName: 'John',  //|     firstName: '',
+  lastName: 'Doe',    //|     lastName: '',
+  ...                 //|     ...
+};                    //|   };
+
+class MyComponent extends Component {
+
+  handleSubmit = newData => {
+    console.log(newData);
+  }
+
+  render() {
+    return (
+      <div>
+        ...
+        <Form from={data} onSubmit={this.handleSubmit} />
+      </div>
+    )
+  }
+}
