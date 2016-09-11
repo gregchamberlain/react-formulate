@@ -38,7 +38,9 @@ export default class ComponentName extends Component {
 
   constructor(props) {
     super(props);
-    this.state = obj;
+    this.state = {
+      value: obj
+    };
     // this.state = {
     //   name: '',
     //   description: '',
@@ -46,6 +48,11 @@ export default class ComponentName extends Component {
     //   pretty: false,
     //   variants: []
     // };
+    setTimeout(this.changeState, 2000);
+  }
+
+  changeState = () => {
+    this.setState({value: {firstName: 'Greg'}});
   }
 
   handleChange = val => {
@@ -57,7 +64,7 @@ export default class ComponentName extends Component {
       <div>
         <h1>Form</h1>
         {/* <Form onChange={this.handleChange} value={this.state} /> */}
-        <Form from={obj}/>
+        <Form from={this.state.value}/>
         <hr />
         <div><pre>{JSON.stringify(this.state, null, 2)}</pre></div>
       </div>
