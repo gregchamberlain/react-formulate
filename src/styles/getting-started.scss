@@ -17,18 +17,6 @@
       background: #01579B;
       border-radius: 5px;
     }
-  }
-
-  .content {
-    padding: 10px 50px;
-
-    .CodeMirror {
-      height: auto;
-      min-height: 300px;
-    }
-    .CodeMirror-scroll {
-      min-height: 300px;
-    }
 
     ul {
       list-style: none;
@@ -46,7 +34,7 @@
 
 .code {
   border-radius: 2px;
-  box-shadow: 2px 2px 15px black;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
   overflow: hidden;
   margin: 20px;
 }

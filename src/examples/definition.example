@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+import { string, number, boolean, object, array } from 'react-formulate';
+
+// Preexisting data   //|   From Scratch
+                      //|
+const data = {        //|   const data = {
+  firstName: 'John',  //|     firstName: '',
+  lastName: 'Doe',    //|     lastName: '',
+  ...                 //|     ...
+};                    //|   };
+
+class MyComponent extends Component {
+
+  handleSubmit = newData => {
+    console.log(newData);
+  }
+
+  render() {
+    return (
+      <div>
+        ...
+        <Form from={data} onSubmit={this.handleSubmit} />
+      </div>
+    )
+  }
+}

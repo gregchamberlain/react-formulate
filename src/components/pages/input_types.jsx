@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InputTypes = ({   }) => (
-  <div>
+  <div className="content">
     <h1>InputTypes</h1>
     <h2>string</h2>
     <h2>number</h2>
