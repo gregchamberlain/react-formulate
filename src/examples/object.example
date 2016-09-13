@@ -1,0 +1,9 @@
+import { object, string, number } from 'react-formulate';
+
+const Input = object({
+  name: string({label: 'Name'}),
+  age: number({label: 'Age'})
+})({label: 'Object'});
+
+// Rendering
+<Input value={this.state.value} onChange={this.handleChange}/>

@@ -4,6 +4,7 @@ import StringExample from '../../examples/string.example';
 import NumberExample from '../../examples/number.example';
 import BooleanExample from '../../examples/boolean.example';
 import ArrayExample from '../../examples/array.example';
+import ObjectExample from '../../examples/object.example';
 
 import SimpleExample from '../examples/simple';
 import ComplexExample from '../examples/object_example';
@@ -13,8 +14,10 @@ const StringInput = SimpleExample('string')({label: 'String'});
 const NumberInput = SimpleExample('number')({label: 'Number'});
 const BooleanInput = SimpleExample('boolean')({label: 'Boolean'});
 const ArrayInput = ComplexExample('array')(SimpleExample('string')({}))({label: 'Strings'});
-const SelectInput = ComplexExample('select')(['One', 'Two', 'Three'])({label: 'Select'});
-const ColorInput = InputTypes.color({label: 'Color'});
+const ObjectInput = ComplexExample('object')({
+  name: SimpleExample('string')({label: 'Name'}),
+  age: SimpleExample('number')({label: 'Age'})
+})({label: 'Object'});
 
 const InputTypesPage = ({   }) => (
   <div className="content">
@@ -68,7 +71,9 @@ const InputTypesPage = ({   }) => (
       <pre className="syntaxbox">
         <code>object(<var>object</var>)([<var>options</var>])</code>
       </pre>
-      <c>{"import { object } from 'react-formulate'"}</c>
+      <Code value={ObjectExample} readOnly/>
+      <h3>Result</h3>
+      <ObjectInput />
   </div>
 );
 
