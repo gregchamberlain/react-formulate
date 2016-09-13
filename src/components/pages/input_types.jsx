@@ -7,17 +7,17 @@ import ArrayExample from '../../examples/array.example';
 import ObjectExample from '../../examples/object.example';
 
 import SimpleExample from '../examples/simple';
-import ComplexExample from '../examples/object_example';
+import ArrayInput from '../examples/array';
 import Code from '../ui/code';
 
 const StringInput = SimpleExample('string')({label: 'String'});
 const NumberInput = SimpleExample('number')({label: 'Number'});
 const BooleanInput = SimpleExample('boolean')({label: 'Boolean'});
-const ArrayInput = ComplexExample('array')(SimpleExample('string')({}))({label: 'Strings'});
-const ObjectInput = ComplexExample('object')({
+const ObjectInput = SimpleExample('object')({
   name: SimpleExample('string')({label: 'Name'}),
   age: SimpleExample('number')({label: 'Age'})
-})({label: 'Object'});
+}, {label: 'Object'});
+
 
 const InputTypesPage = ({   }) => (
   <div className="content">
@@ -59,7 +59,7 @@ const InputTypesPage = ({   }) => (
     <h1>array</h1>
     <p>The array InputType is invoked first passing in the inputType for the items in the array, then invoked again to pass the options object</p>
     <pre className="syntaxbox">
-      <code>array(<var>inputType</var>)([<var>options</var>])</code>
+      <code>array(<var>inputType</var>[, <var>options</var>])</code>
     </pre>
     <Code value={ArrayExample} readOnly/>
     <h3>Result</h3>
@@ -69,7 +69,7 @@ const InputTypesPage = ({   }) => (
 
     <h1>object</h1>
       <pre className="syntaxbox">
-        <code>object(<var>object</var>)([<var>options</var>])</code>
+        <code>object(<var>object</var>[, <var>options</var>])</code>
       </pre>
       <Code value={ObjectExample} readOnly/>
       <h3>Result</h3>
