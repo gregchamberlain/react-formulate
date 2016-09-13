@@ -8,6 +8,7 @@ export object from './inputs/object';
 export number from './inputs/number';
 export select from './inputs/select';
 export boolean from './inputs/bool';
+export password from './inputs/password';
 export fromObject from './utils/from_object';
 import Form from './utils/form';
 

@@ -8,6 +8,8 @@ const obj = {
   cool: true,
   skills: ["Coding", "Sports", "Other"],
   age: 22,
+  password: 'asdasasdasdads',
+  longText: 'asdasdkjadshkljasdhalskdjahsdlkajsdhalkdsjhasdlkjhgsddljhalskdjhdflkjsadh',
   contact: {
     phone: {
       mobile: '(715) 307-7746',
@@ -48,15 +50,10 @@ export default class ComponentName extends Component {
     //   pretty: false,
     //   variants: []
     // };
-    setTimeout(this.changeState, 2000);
-  }
-
-  changeState = () => {
-    this.setState({value: {firstName: 'Greg'}});
   }
 
   handleChange = val => {
-    this.setState(val);
+    // this.setState({value: val});
   }
 
   render() {
