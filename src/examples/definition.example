@@ -1,26 +1,39 @@
 import React, { Component } from 'react';
 import { string, number, boolean, object, array } from 'react-formulate';
 
-// Preexisting data   //|   From Scratch
-                      //|
-const data = {        //|   const data = {
-  firstName: 'John',  //|     firstName: '',
-  lastName: 'Doe',    //|     lastName: '',
-  ...                 //|     ...
-};                    //|   };
+const Inputs = object({
+  firstName: string({label: 'First Name'}),
+  lastName: string({label: 'Last Name'}),
+  age: number({label: 'Age'}),
+  contact: object({
+    phone: string({label: 'Phone'}),
+    emails: array(string())({label: 'Emails'})
+  })({label: 'Contact'})
+})({label: 'User'});
 
 class MyComponent extends Component {
 
-  handleSubmit = newData => {
-    console.log(newData);
+  constructor(props) {
+    super(props);
+    this.setState({
+      value: {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 23
+      }
+    });
+  }
+
+  handleChange = value => {
+    this.setState({value: value});
   }
 
   render() {
     return (
       <div>
         ...
-        <Form from={data} onSubmit={this.handleSubmit} />
+        <Inputs onChange={this.handleChange} value={this.state.value} />
       </div>
-    )
+    );
   }
 }

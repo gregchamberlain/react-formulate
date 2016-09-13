@@ -12,12 +12,6 @@
       margin: 0;
     }
 
-    code {
-      padding: 20px;
-      background: #01579B;
-      border-radius: 5px;
-    }
-
     ul {
       list-style: none;
       padding: 0;
@@ -30,6 +24,11 @@
       margin: 2px;
     }
   }
+}
+code {
+  padding: 20px;
+  background: #01579B;
+  border-radius: 5px;
 }
 
 .code {
