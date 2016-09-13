@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { array, number } from '../src';
 
-const Input = array(number())({label: 'numbers'});
+const Input = array(number(), {label: 'numbers'});
 
 export default class ArrayExample extends Component {
   constructor(props) {

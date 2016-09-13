@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { merge } from 'lodash';
 
-const array = inputType => (opts = {}) => {
+const array = (inputType, opts = {}) => {
   const InputWrapper = ({value, onChange, children}) => (
     <ArrayInput value={value} onChange={onChange} InputType={inputType} opts={opts}>
       {children}

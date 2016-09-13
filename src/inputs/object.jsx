@@ -1,6 +1,6 @@
 import React from 'react';
 
-const object = inputTypes => (opts = {}) => {
+const object = (inputTypes, opts = {}) => {
   const InputWrapper = ({value, onChange, children}) => (
     <ObjectInput onChange={onChange} value={value} inputTypes={inputTypes} opts={opts}>
       {children}

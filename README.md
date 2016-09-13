@@ -10,6 +10,7 @@ npm install --save react-formulate
 
 
 ### TODO List
+- [ ] More input types (select, radioButton, more...)
 - [ ] Custom Labels
 - [ ] InputType Overrides
 - [ ] Input Validators

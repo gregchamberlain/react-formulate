@@ -6,13 +6,13 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = merge({}, props.from);
-    this.inputs = fromObject(this.state)();
+    this.inputs = fromObject(this.state);
   }
 
   componentWillReceiveProps(props) {
     if (!isEqual(props.from, this.props.from)) {
       const data = merge({}, props.from);
-      this.inputs = fromObject(data)();
+      this.inputs = fromObject(data);
       this.setState(data);
     }
   }
