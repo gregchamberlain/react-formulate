@@ -8,8 +8,8 @@ const text = (opts = {}) => {
       {children}
     </label>
   );
-  InputWrapper.defaultValue = ""
+  InputWrapper.defaultValue = "";
   return InputWrapper;
-}
+};
 
 export default text;
