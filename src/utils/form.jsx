@@ -13,6 +13,7 @@ class Form extends Component {
     if (!isEqual(props.from, this.props.from)) {
       const data = merge({}, props.from);
       this.inputs = fromObject(data);
+      this.state = {};
       this.setState(data);
     }
   }
