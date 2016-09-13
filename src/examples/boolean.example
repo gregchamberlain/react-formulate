@@ -1,0 +1,6 @@
+import { boolean } from 'react-formulate';
+
+const Input = boolean({label: 'Boolean'});
+
+// Rendering
+<Input value={this.state.value} onChange={this.handleChange}/>

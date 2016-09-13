@@ -1,0 +1,6 @@
+import { number } from 'react-formulate';
+
+const Input = number({label: 'Number'});
+
+// Rendering
+<Input value={this.state.value} onChange={this.handleChange}/>

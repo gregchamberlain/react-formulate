@@ -8,6 +8,12 @@
     justify-content: center;
     color: #fff;
 
+    code {
+      padding: 20px;
+      background: #01579B;
+      border-radius: 5px;
+    }
+
     h1 {
       margin: 0;
     }
@@ -24,11 +30,6 @@
       margin: 2px;
     }
   }
-}
-code {
-  padding: 20px;
-  background: #01579B;
-  border-radius: 5px;
 }
 
 .code {
