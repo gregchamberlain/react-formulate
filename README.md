@@ -6,8 +6,8 @@ Easily create forms for even the most complex data.
 ```
 npm install --save react-formulate
 ```
-## [Documentation](https://gregchamberlain.github.io/react-formulate)
-
+## Documentation
+https://gregchamberlain.github.io/react-formulate
 
 ### TODO List
 - [ ] More input types (select, radioButton, more...)
