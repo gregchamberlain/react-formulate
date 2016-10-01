@@ -35,6 +35,14 @@ const obj = {
 //   )
 // });
 
+const style = {
+  label: {
+    display: 'block'
+  },
+  input: {
+    width: '100%'
+  }
+};
 
 export default class ComponentName extends Component {
 
@@ -61,7 +69,7 @@ export default class ComponentName extends Component {
       <div>
         <h1>Form</h1>
         {/* <Form onChange={this.handleChange} value={this.state} /> */}
-        <Form from={this.state.value}/>
+        <Form from={this.state.value} style={style}/>
         <hr />
         <div><pre>{JSON.stringify(this.state, null, 2)}</pre></div>
       </div>

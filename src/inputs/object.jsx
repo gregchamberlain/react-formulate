@@ -1,8 +1,11 @@
 import React from 'react';
+import { merge } from 'lodash';
+import { fromDefault } from '../utils/defaults.js';
 
 const object = (inputTypes, opts = {}) => {
-  const InputWrapper = ({value, onChange, children}) => (
-    <ObjectInput onChange={onChange} value={value} inputTypes={inputTypes} opts={opts}>
+  opts = fromDefault(opts);
+  const InputWrapper = ({value, onChange, children, style}) => (
+    <ObjectInput onChange={onChange} value={value} inputTypes={inputTypes} opts={opts} style={style}>
       {children}
     </ObjectInput>
   );
@@ -14,8 +17,8 @@ const object = (inputTypes, opts = {}) => {
   return InputWrapper;
 };
 
-const ObjectInput  = ({ value = {}, onChange, inputTypes, opts, children }) => (
-  <label>
+const ObjectInput  = ({ value = {}, onChange, inputTypes, opts, children, style = {} }) => (
+  <label style={merge(style.label, opts.style.label)}>
     {opts.label}
     {children}
     {Object.keys(inputTypes).map(key => {
@@ -24,6 +27,7 @@ const ObjectInput  = ({ value = {}, onChange, inputTypes, opts, children }) => (
           <Input
             key={`input${key}`}
             value={value[key]}
+            style={merge(opts.style, style)}
             onChange={val => onChange(Object.assign({}, value, {[key]: val}))}/>
       );
     })}
