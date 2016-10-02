@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { number } from '../src';
 
-const Input = number({label: 'Number', min: 0, max: 5, step: 0.1});
+const Input = number({label: 'Number'});
 
 export default class Number extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ export default class Number extends Component {
 
   render() {
     return (
-      <Input onChange={this.update} value={this.state.value} />
+      <input type="number" />
     );
   }
 }
